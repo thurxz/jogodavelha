@@ -19,3 +19,7 @@
   background: black;
   color: #ffffff;
 }
+
+.casinha.vencedora {
+  background-color: green;
+}
