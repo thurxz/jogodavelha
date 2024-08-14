@@ -1,25 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  margin: 0;
+}
+
+#container {
+  text-align: center;
+  color: white;
+}
+
 #board {
-  border: thin solid red;
   width: 420px;
   height: 420px;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 10px; /* Espaço entre as casinhas */
 }
 
 .casinha {
-  width: 135px;
-  height: 135px;
-  border: thin solid;
-  float: left;
-  text-align:center;
-  line-height: 135px;
-  font-size:80px;
+  width: 130px;
+  height: 130px;
+  text-align: center;
+  line-height: 130px;
+  font-size: 80px;
+  color: black;
+  border: thin solid transparent; /* Remove borders */
 }
 
-.gray {
-  background: black;
-  color: #ffffff;
+.casinha:nth-child(odd) {
+  background: #d3d3d3; /* Cinza claro */
+}
+
+.casinha:nth-child(even) {
+  background: #a9a9a9; /* Cinza escuro */
 }
 
 .casinha.vencedora {
   background-color: green;
+}
+
+.casinha.X {
+  color: blue;
+}
+
+.casinha.O {
+  color: red;
 }
